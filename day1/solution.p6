@@ -1,6 +1,6 @@
 #!/usr/bin/env perl6
 
-my @chars = (slurp @*ARGS[0]).trim.split('')[1..*-2];
+my @chars = (slurp @*ARGS[0]).trim.comb;
 my %chars_map = <( 1 ) -1>;
 
 # Part 1
