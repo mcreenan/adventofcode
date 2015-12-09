@@ -2,7 +2,7 @@
 
 my %distances;
 for @*ARGS[0].IO.lines {
-	my ($from_city, $x, $to_city, $y, $distance) = .split(' ');
+	my ($from_city, $to_city, $distance) = .split(/\s(to|\=)\s/);
 	%distances{$from_city}{$to_city} = $distance.Numeric;
 	%distances{$to_city}{$from_city} = $distance.Numeric;
 	
